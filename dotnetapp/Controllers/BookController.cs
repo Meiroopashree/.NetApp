@@ -5,11 +5,12 @@ using Microsoft.Data.SqlClient;
 using dotnetapp.Models;
 using Data;
 
-namespace crudapp.Controllers
+namespace dotnetapp.Controllers
 {
     public class BookController : Controller
     {
-        private string connectionString = "Your_Connection_String_Here";
+        // private string connectionString = "Your_Connection_String_Here";
+        private string connectionString = "User ID=sa;password=examlyMssql@123;server=fcebdccccdbcfacbdcbaeadbebabcdebdca-0;Database=CRUDOperations;trusted_connection=false;Persist Security Info=False;Encrypt=False";
 
         public IActionResult Create()
         {
