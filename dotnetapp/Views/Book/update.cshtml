@@ -1,0 +1,35 @@
+@model dotnetapp.Models.Book
+
+@{
+    ViewBag.Title = "Update Book";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Your layout file
+}
+
+<h2>Update Book</h2>
+
+@using (Html.BeginForm("Update", "Book", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id) <!-- Assuming Id is used to identify the book -->
+
+    <div>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Author)
+        @Html.TextBoxFor(model => model.Author)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Language)
+        @Html.TextBoxFor(model => model.Language)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Type)
+        @Html.TextBoxFor(model => model.Type)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title)
+    </div>
+    <input type="submit" value="Update" />
+}

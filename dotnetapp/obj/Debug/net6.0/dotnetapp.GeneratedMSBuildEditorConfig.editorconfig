@@ -15,16 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/coder/project/workspace/dotnetapp
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/coder/project/workspace/dotnetapp/Views/Book/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9BZGQuY3NodG1s
+[/home/coder/project/workspace/dotnetapp/Views/Book/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9jcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/coder/project/workspace/dotnetapp/Views/Book/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9kZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/coder/project/workspace/dotnetapp/Views/Book/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9HZXRBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/coder/project/workspace/dotnetapp/Views/Book/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9VcGRhdGUuY3NodG1s
+[/home/coder/project/workspace/dotnetapp/Views/Book/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/coder/project/workspace/dotnetapp/Views/Book/update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay91cGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/coder/project/workspace/dotnetapp/Views/Home/Index.cshtml]

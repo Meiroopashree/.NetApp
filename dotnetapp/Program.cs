@@ -1,15 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using dotnetapp.Models;
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddDbContext<DatabaseContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
-builder.Services.AddScoped<IBookService, BookService>();
 
 var app = builder.Build();
 
@@ -30,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Furniture}/{action=Index}/{id?}");
 
 app.Run();
