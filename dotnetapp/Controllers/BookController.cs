@@ -66,50 +66,49 @@ namespace dotnetapp.Controllers
         }
 
         public IActionResult Index()
-        {
-            List<Book> bookList = GetBookListFromDatabase();
-            Console.WriteLine(bookList);
-            return View(bookList);
-        }
+    {
+        List<Book> bookList = GetBookListFromDatabase();
+        return View(bookList);
+    }
 
-        private List<Book> GetBookListFromDatabase()
-        {
-            List<Book> bookList = new List<Book>();
+    private List<Book> GetBookListFromDatabase()
+    {
+        List<Book> bookList = new List<Book>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            string query = "SELECT Id, Name, Author, Language, Type, Title FROM Book";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            try
             {
-                string query = "SELECT Id, Name, Author, Language, Type, Title FROM Book";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                try
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-                    while (reader.Read())
+                    Book book = new Book
                     {
-                        Book book = new Book
-                        {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Name = reader["Name"].ToString(),
-                            Author = reader["Author"].ToString(),
-                            Language = reader["Language"].ToString(),
-                            Type = reader["Type"].ToString(),
-                            Title = reader["Title"].ToString()
-                        };
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Name = reader["Name"].ToString(),
+                        Author = reader["Author"].ToString(),
+                        Language = reader["Language"].ToString(),
+                        Type = reader["Type"].ToString(),
+                        Title = reader["Title"].ToString()
+                    };
 
-                        bookList.Add(book);
-                    }
-                    reader.Close();
+                    bookList.Add(book);
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    // Handle the exception if needed
-                }
+                reader.Close();
             }
-
-            return bookList;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                // Handle the exception if needed
+            }
         }
+
+        return bookList;
+    }
 
         [HttpPost]
         public IActionResult Delete(int id)
