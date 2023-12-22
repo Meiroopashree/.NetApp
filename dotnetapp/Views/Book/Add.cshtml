@@ -8,47 +8,36 @@
             <h3>Add Book</h3>
             <form asp-action="Add" method="post">
                 <div class="form-group">
-                    <label asp-for="Title">Name *</label>
+                    <label asp-for="Name">Name *</label>
                     <input type="text" class="form-control" asp-for="Name" />
                     <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
 
-                <div class="form-group">
-                    <label asp-for="GenreId">Genre *</label>
-                    <select asp-for="GenreId" asp-items="Model.GenreList" class="form-control">
-                        <option value="">--select--</option>
-                    </select>
-                    <span asp-validation-for="GenreId" class="text-danger"></span>
-                </div>
-
                  <div class="form-group">
-                    <label asp-for="Isbn">Isbn *</label>
-                    <input type="text" class="form-control" asp-for="Isbn" />
-                    <span asp-validation-for="Isbn" class="text-danger"></span>
+                    <label asp-for="Author">Author *</label>
+                    <input type="text" class="form-control" asp-for="Author" />
+                    <span asp-validation-for="Author" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="TotalPages">Total Pages *</label>
-                    <input type="number" class="form-control" asp-for="TotalPages" />
-                    <span asp-validation-for="TotalPages" class="text-danger"></span>
-                </div>
-
-
-                <div class="form-group">
-                    <label asp-for="AuthorId">Author *</label>
-                    <select asp-for="AuthorId" asp-items="Model.AuthorList" class="form-control">
-                        <option value="">--select--</option>
-                    </select>
-                    <span asp-validation-for="AuthorId" class="text-danger"></span>
+                    <label asp-for="Language">Language *</label>
+                    <input type="text" class="form-control" asp-for="Language" />
+                    <span asp-validation-for="Language" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Title">Publisher *</label>
-                    <select asp-for="PubhlisherId" asp-items="Model.PublisherList" class="form-control">
-                        <option value="">--select--</option>
-                    </select>
-                    <span asp-validation-for="PubhlisherId" class="text-danger"></span>
+                    <label asp-for="Type">Type *</label>
+                    <input type="text" class="form-control" asp-for="Type" />
+                    <span asp-validation-for="Type" class="text-danger"></span>
                 </div>
+
+                <div class="form-group">
+                    <label asp-for="Title">Title *</label>
+                    <input type="text" class="form-control" asp-for="Title" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+
 
                 @if (TempData["msg"] != null)
                 {

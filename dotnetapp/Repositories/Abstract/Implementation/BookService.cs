@@ -52,11 +52,11 @@ namespace dotnetapp.Repositories.Implementation
                         select new Book
                         {
                             Id = book.Id,
-                            Name = book.Name;
-                            Author = book.Author;
-                            Language = book.Language;
-                            Type = book.Type;
-                            Title = book.Title,
+                            Name = book.Name,
+                            Author = book.Author,
+                            Language = book.Language,
+                            Type = book.Type,
+                            Title = book.Title
                         }
                         ).ToList();
             return data;

@@ -15,6 +15,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/coder/project/workspace/dotnetapp
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/coder/project/workspace/dotnetapp/Views/Book/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9BZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/coder/project/workspace/dotnetapp/Views/Book/GetAll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9HZXRBbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/coder/project/workspace/dotnetapp/Views/Book/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9vay9VcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/coder/project/workspace/dotnetapp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
