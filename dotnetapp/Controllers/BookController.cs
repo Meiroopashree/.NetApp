@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using dotnetapp.Models;
-using Data;
 
 namespace dotnetapp.Controllers
 {
