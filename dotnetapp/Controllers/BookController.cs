@@ -68,6 +68,7 @@ namespace dotnetapp.Controllers
         public IActionResult Index()
         {
             List<Book> bookList = GetBookListFromDatabase();
+            Console.WriteLine(bookList);
             return View(bookList);
         }
 
