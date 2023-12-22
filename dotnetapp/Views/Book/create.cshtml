@@ -10,6 +10,10 @@
 @using (Html.BeginForm("Create", "Book", FormMethod.Post))
 {
     <div>
+        @Html.LabelFor(model => model.Id)
+        @Html.TextBoxFor(model => model.Id)
+    </div>
+    <div>
         @Html.LabelFor(model => model.Name)
         @Html.TextBoxFor(model => model.Name)
     </div>

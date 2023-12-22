@@ -9,7 +9,7 @@ namespace dotnetapp.Controllers
     public class BookController : Controller
     {
         // private string connectionString = "Your_Connection_String_Here";
-        private string connectionString = "User ID=sa;password=examlyMssql@123;server=fcebdccccdbcfacbdcbaeadbebabcdebdca-0;Database=CRUDOperations;trusted_connection=false;Persist Security Info=False;Encrypt=False";
+        private string connectionString = "User ID=sa;password=examlyMssql@123;server=bfdeeddcedfabcfacbdcbaeadbebabcdebdca-0;Database=CRUDOperations;trusted_connection=false;Persist Security Info=False;Encrypt=False";
 
         public IActionResult Create()
         {
@@ -25,10 +25,11 @@ namespace dotnetapp.Controllers
                 {
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        string query = "INSERT INTO Books (Name, Author, Language, Type, Title) " +
-                                       "VALUES (@Name, @Author, @Language, @Type, @Title)";
+                        string query = "INSERT INTO Book (Id,Name, Author, Language, Type, Title) " +
+                                       "VALUES (@Id, @Name, @Author, @Language, @Type, @Title)";
 
                         SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Id", newBook.Id);
                         command.Parameters.AddWithValue("@Name", newBook.Name);
                         command.Parameters.AddWithValue("@Author", newBook.Author);
                         command.Parameters.AddWithValue("@Language", newBook.Language);
@@ -76,7 +77,7 @@ namespace dotnetapp.Controllers
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT Id, Name, Author, Language, Type, Title FROM Books";
+                string query = "SELECT Id, Name, Author, Language, Type, Title FROM Book";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 try
@@ -114,7 +115,7 @@ namespace dotnetapp.Controllers
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM Books WHERE Id = @Id";
+                string query = "DELETE FROM Book WHERE Id = @Id";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Id", id);
@@ -156,7 +157,7 @@ namespace dotnetapp.Controllers
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE Books SET Name = @Name, Author = @Author, " +
+                string query = "UPDATE Book SET Name = @Name, Author = @Author, " +
                                "Language = @Language, Type = @Type, Title = @Title WHERE Id = @Id";
 
                 SqlCommand command = new SqlCommand(query, connection);
@@ -192,7 +193,7 @@ namespace dotnetapp.Controllers
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT Id, Name, Author, Language, Type, Title FROM Books WHERE Id = @Id";
+                string query = "SELECT Id, Name, Author, Language, Type, Title FROM Book WHERE Id = @Id";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Id", id);
