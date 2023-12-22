@@ -1,3 +1,5 @@
+using System;
+
 namespace dotnetapp.Models
 {
     public class Book
