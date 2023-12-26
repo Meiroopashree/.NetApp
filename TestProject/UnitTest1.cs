@@ -1,8 +1,7 @@
 using System;
 using NUnit.Framework;
 using System.Reflection;
-// using dotnetapp.Models;
-using dotnetapp.Controllers;
+using dotnetapp.Controllers; // Make sure this namespace is correct and the reference is added
 
 namespace TestProject
 {
@@ -13,25 +12,18 @@ namespace TestProject
         {
         }
 
-        // [Test]
-        // public void Book_ClassExists()
-        // {
-        //     string assemblyName = "dotnetapp"; 
-        //     string typeName = "dotnetapp.Models.Book";
-        //     Assembly assembly = Assembly.Load(assemblyName);
-        //     Type bookType = assembly.GetType(typeName);
-        //     Assert.IsNotNull(bookType);
-        //     var book = Activator.CreateInstance(bookType);
-        //     Assert.IsNotNull(book);
-        // }
-
-         [Test]
+        [Test]
         public void BookController_CreateMethodExists()
         {
-            string assemblyName = "dotnetapp";
+            string assemblyName = "dotnetapp"; // Replace with your actual assembly name if different
             string typeName = "dotnetapp.Controllers.BookController";
             Assembly assembly = Assembly.Load(assemblyName);
             Type controllerType = assembly.GetType(typeName);
+            
+            // Check if the controller type exists
+            Assert.IsNotNull(controllerType);
+
+            // Check if the 'Create' method with Book parameter exists
             Type[] parameterTypes = new Type[] { typeof(Book) };
             MethodInfo createMethod = controllerType.GetMethod("Create", parameterTypes);
             Assert.IsNotNull(createMethod);
