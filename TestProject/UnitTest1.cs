@@ -1,18 +1,8 @@
+using System;
+using NUnit.Framework;
+using System.Reflection;
 using dotnetapp.Models;
-using System;
-using NUnit.Framework;
-using System.Reflection;
 
-using NUnit.Framework;
-using System;
-using System.Reflection;
-using System.Linq;
-using Deliveryboy.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Deliveryboy.Models;
- 
-namespace TestProject;
 namespace TestProject;
 
 public class Tests
@@ -27,6 +17,7 @@ public class Tests
     {
         Assert.Pass();
     }
+
     // [Test]
     //     public void BookController_ClassExists()
     //     {
@@ -38,5 +29,17 @@ public class Tests
     //         var controller = Activator.CreateInstance(controllerType);
     //         Assert.IsNotNull(controller);
     //     }
+
+    [Test]
+        public void Book_ClassExists()
+        {
+            string assemblyName = "dotnetapp";
+            string typeName = "dotnetapp.Models.Book";
+            Assembly assembly = Assembly.Load(assemblyName);
+            Type rideType = assembly.GetType(typeName);
+            Assert.IsNotNull(rideType);
+            var ride = Activator.CreateInstance(rideType);
+            Assert.IsNotNull(ride);
+        }
     
 }

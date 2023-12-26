@@ -1,3 +1,6 @@
+/home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache
+/home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache
 /home/coder/project/workspace/TestProject/bin/Debug/net6.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /home/coder/project/workspace/TestProject/bin/Debug/net6.0/NUnit3.TestAdapter.dll
 /home/coder/project/workspace/TestProject/bin/Debug/net6.0/NUnit3.TestAdapter.pdb
@@ -85,9 +88,6 @@
 /home/coder/project/workspace/TestProject/bin/Debug/net6.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 /home/coder/project/workspace/TestProject/bin/Debug/net6.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 /home/coder/project/workspace/TestProject/bin/Debug/net6.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-/home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.csproj.AssemblyReference.cache
-/home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.GeneratedMSBuildEditorConfig.editorconfig
-/home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.csproj.CoreCompileInputs.cache
 /home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.csproj.CopyComplete
 /home/coder/project/workspace/TestProject/obj/Debug/net6.0/TestProject.dll
 /home/coder/project/workspace/TestProject/obj/Debug/net6.0/refint/TestProject.dll
